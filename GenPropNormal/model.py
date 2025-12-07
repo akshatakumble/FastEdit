@@ -42,6 +42,7 @@ class RegionAwareLoss(nn.Module):
             
             num_channels = grad_feats32.shape[1]
             grad_norm = torch.norm(grad_feats32, dim=1) / (num_channels ** 0.5)
+            grad_norm = torch.clamp(grad_norm, max=5.0)  # Prevent extreme spikes
             
             mask_squeezed = mask_latent32_resized.squeeze(1)
             L_grad = torch.mean(mask_squeezed * grad_norm)
