@@ -21,10 +21,6 @@ EfficientEdit addresses the challenge of video object removal by propagating edi
 
 ### Key Features
 
-
-https://github.com/user-attachments/assets/18fa82fb-43bc-4548-a902-47b1546efbff
-
-
 - **Parameter-Efficient Design**: Trains only lightweight conditioning modules (~70% reduction in trainable parameters) while keeping the SVD backbone frozen
 - **Region-Aware Loss**: Explicitly supervises edited regions while preserving background content
 - **Temporal Consistency**: Leverages pre-trained SVD temporal attention for coherent propagation
